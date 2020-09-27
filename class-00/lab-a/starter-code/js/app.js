@@ -6,7 +6,7 @@ const leftImage = document.getElementById('left');
 const centerImage = document.getElementById('center');
 const rightImage = document.getElementById('right');
 
-const allProducts = [];
+let allProducts = [];
 const container = document.getElementById('image_container');
 const viewed = [];
 const labels = [];
@@ -40,7 +40,7 @@ function displayPics(){
   // PUT YOUR RESPONSE IN THIS COMMENT .- Rando can't be logged because it is block scoped.
   console.log(viewed);
 
-  for (const i = 0; i < 3; i++){
+  for (let i = 0; i < 3; i++){
     const temp = viewed.shift();
     pics[i].src = allProducts[temp].path;
     pics[i].id = allProducts[temp].name;
